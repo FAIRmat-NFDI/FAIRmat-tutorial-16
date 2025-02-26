@@ -1,0 +1,14 @@
+Properties of a good dopant:
+This list was presented by Seth Marder during the Fpi14 conference in Berlin. 
+
+1. Complete and clean ET to (from) transport material from (to) dopant 
+a. Dopant IE (EA) should be as low (high) as possible
+b. Dopant should form stable ions
+c. Dopant molecule and ions sould not be prone to side reactions
+2. Doping can be spatially localized
+a. Large dopant molecules to avoid diffusion
+3. Dopant ions should not trap carriers on the nearby molecules
+a. Large dopant species to minimize Coulombic effects
+4. Ideally suitable for both vapor and solution deposition
+5. Ideally should be easy to handle in air.
+a. But not generally achievable for low IE n-dopants

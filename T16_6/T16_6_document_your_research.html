@@ -1,0 +1,1013 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutorial 16  materials
+">
+      
+      
+        <meta name="author" content="FAIRmat Area F">
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.1.1">
+    
+    
+      
+        <title>Document Your Research - FAIRmat Tutorial 16</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.23b6d78a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font:"Titillium Web";--md-code-font:""}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="#2a4cdf" data-md-color-accent="#008a67">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-a-new-upload" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://www.fairmat-nfdi.eu/fairmat/" title="FAIRmat Tutorial 16" class="md-header__button md-logo" aria-label="FAIRmat Tutorial 16" data-md-component="logo">
+      
+  <img src="../assets/fairmat-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FAIRmat Tutorial 16
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Document Your Research
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FAIRmat-NFDI/FAIRmat-tutorial-16" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.fairmat-nfdi.eu/fairmat/" title="FAIRmat Tutorial 16" class="md-nav__button md-logo" aria-label="FAIRmat Tutorial 16" data-md-component="logo">
+      
+  <img src="../assets/fairmat-logo.png" alt="logo">
+
+    </a>
+    FAIRmat Tutorial 16
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FAIRmat-NFDI/FAIRmat-tutorial-16" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Contents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T16_2/T16_2_explore_data_records.html" class="md-nav__link">
+        Explore NOMAD entries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T16_3/T16_3_upload_raw_data_files.html" class="md-nav__link">
+        Upload Raw Data Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T16_5/T16_5_create_a_dataset.html" class="md-nav__link">
+        Create a Dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Document Your Research
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="T16_6_document_your_research.html" class="md-nav__link md-nav__link--active">
+        Document Your Research
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-upload" class="md-nav__link">
+    Create a New Upload
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-entry-using-nomads-built-in-schema" class="md-nav__link">
+    Create an Entry Using NOMAD's Built-in Schema:
+  </a>
+  
+    <nav class="md-nav" aria-label="Create an Entry Using NOMAD's Built-in Schema:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-substance-entry" class="md-nav__link">
+    Create a substance entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-sample-entry" class="md-nav__link">
+    Create a sample entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-instrument-entry" class="md-nav__link">
+    Create an instrument entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-process-entry" class="md-nav__link">
+    Create a process entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-measurement-entry" class="md-nav__link">
+    Create a measurement entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-your-experiment" class="md-nav__link">
+    Integrate your experiment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploring-and-searching-entries-in-nomads-eln" class="md-nav__link">
+    Exploring and Searching Entries in NOMAD’s ELN
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T16_7/T16_7_create_custom_eln_templates.html" class="md-nav__link">
+        Create Custom ELN Templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T16_8/T16_8_write_a_custom_parser.html" class="md-nav__link">
+        Use Tabular Parser
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-upload" class="md-nav__link">
+    Create a New Upload
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-entry-using-nomads-built-in-schema" class="md-nav__link">
+    Create an Entry Using NOMAD's Built-in Schema:
+  </a>
+  
+    <nav class="md-nav" aria-label="Create an Entry Using NOMAD's Built-in Schema:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-substance-entry" class="md-nav__link">
+    Create a substance entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-sample-entry" class="md-nav__link">
+    Create a sample entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-instrument-entry" class="md-nav__link">
+    Create an instrument entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-process-entry" class="md-nav__link">
+    Create a process entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-measurement-entry" class="md-nav__link">
+    Create a measurement entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-your-experiment" class="md-nav__link">
+    Integrate your experiment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploring-and-searching-entries-in-nomads-eln" class="md-nav__link">
+    Exploring and Searching Entries in NOMAD’s ELN
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  <h1>Document Your Research</h1>
+
+<h2 id="create-a-new-upload">Create a New Upload<a class="headerlink" href="#create-a-new-upload" title="Permanent link">&para;</a></h2>
+<p>On any page in NOMAD, click <strong>PUBLISH</strong>-&gt; click <strong>Uploads</strong>-&gt; click <strong>CREATE A NEW UPLOAD</strong> -&gt; edit/give name -&gt; click <strong>SAVE</strong>.</p>
+<div style="text-align: center;">
+    <img src="images/create_upload/create_upload_step_1_2.png" alt="create uploads" width="800">
+</div>
+
+<div style="text-align: center;">
+    <img src="images/create_upload/create_upload_step_3.png" alt="create uploads" width="800">
+</div>
+
+<div style="text-align: center;">
+    <img src="images/create_upload/create_upload_step_4.png" alt="create uploads" width="800">
+</div>
+
+<div style="text-align: center;">
+    <img src="images/create_upload/create_upload_step_5_6.png" alt="create uploads" width="800">
+</div>
+
+<h2 id="create-an-entry-using-nomads-built-in-schema">Create an Entry Using NOMAD's Built-in Schema:<a class="headerlink" href="#create-an-entry-using-nomads-built-in-schema" title="Permanent link">&para;</a></h2>
+<p>Open the upload you just created or <a href="#create-a-new-upload">create a new upload.</a> -&gt; click <strong>CREATE FROM SCHEMA</strong> -&gt; give a descriptive name, select your desired built-in schema from dropdown or type to see suggestions -&gt; click <strong>CREATE</strong>.</p>
+<div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_built-in_schema_step_0.png" alt="go to the upload" width="800">
+</div>
+
+<div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_built-in_schema_step_1.png" alt="create built-in schema" width="800">
+</div>
+
+<div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_built-in_schema_step_2_3_4.png" alt="create built-in schema" width="800">
+</div>
+
+<h3 id="create-a-substance-entry">Create a substance entry<a class="headerlink" href="#create-a-substance-entry" title="Permanent link">&para;</a></h3>
+<p>Now, let's create an entry using the built-in <em>Substance ELN</em> schema for <strong>P3HT powder</strong>. Follow the steps for <a href="#create-an-entry-using-nomads-built-in-schema">creating an entry using NOMAD's Built-in Schema.</a> and select <em>Substance ELN</em> in step 3.</p>
+<details class="example">
+<summary>Example: Creating an entry for P3HT powder (screenshots)</summary>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_substance_eln_step_1.png" alt="create built-in schema" width="800">
+</div></p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_substance_eln_step_2_3_4.png" alt="create built-in schema" width="800">
+</div></p>
+</details>
+<details class="info">
+<summary>The input data fields that the built-in schema <em>Substance ELN</em> offer:</summary>
+<p>The built-in schema <em>Substance ELN</em>  provides the following fields for input:</p>
+<ul>
+<li><strong>substance name:</strong> Automatically used as the entry file name.</li>
+<li><strong>datetime:</strong> Allows entry of a date/time stamp.</li>
+<li><strong>substance ID:</strong> A unique, human-readable ID for the substance.</li>
+<li><strong>detailed substance description:</strong> A free text field for additional information.</li>
+</ul>
+<p>Additional subsections available in the <em>data</em> subsection include:</p>
+<ul>
+<li><strong>elemental composition:</strong> Define the chemical composition with atomic and mass fractions.</li>
+<li><strong>pure substance:</strong> Specify if the material is a pure substance purchased from an external vendor, with fields like:<ul>
+<li>Substance name</li>
+<li>IUPAC name</li>
+<li>Molecular formula</li>
+<li>CAS number</li>
+<li>Inchi Key, SMILES, and more.</li>
+</ul>
+</li>
+<li><strong>substance identifier:</strong> Add identifiers for specific substances.</li>
+</ul>
+</details>
+<details class="task">
+<summary>Task: Create an ELN entry for a substance (ca. 3 minutes)</summary>
+<p>Create an ELN entry in NOMAD for one of the following substances:</p>
+<ul>
+<li>Chloroform  </li>
+<li>Glass substrate  </li>
+<li>Pre-patterned ITO substrates  </li>
+</ul>
+<p>Use the <em>Substance ELN</em> schema and include as many details as you like (e.g., Substance Name, Datetime, Substance ID, Description).  </p>
+<blockquote>
+<p><strong>Tip:</strong> Follow the <a href="#create-an-entry-using-nomads-built-in-schema">steps for creating an entry</a>.</p>
+</blockquote>
+</details>
+<h3 id="create-a-sample-entry">Create a sample entry<a class="headerlink" href="#create-a-sample-entry" title="Permanent link">&para;</a></h3>
+<p>Now, let's create an entry using the built-in <em>Generic Sample ELN</em> schema for <strong>P3HT Thin Film</strong>. Follow the steps for <a href="#create-an-entry-using-nomads-built-in-schema">creating an entry using NOMAD's Built-in Schema.</a> and select <em>Generic Sample ELN</em> in step 3.</p>
+<details class="example">
+<summary>Example: Creating an entry for P3HT thin film on glass (screenshots)</summary>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_sample_eln_step_1.png" alt="create built-in schema for sample" width="800">
+</div></p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_sample_eln_step_2_3_4.png" alt="create built-in schema for sample" width="800">
+</div></p>
+</details>
+<details class="info">
+<summary>The input data fields that the built-in schema <em>Generic Sample ELN</em> offers:</summary>
+<p>The built-in schema <em>Generic Sample ELN</em> provides the following fields for input:</p>
+<ul>
+<li><strong>name:</strong> Automatically used as the entry file name.</li>
+<li><strong>datetime:</strong> Allows entry of a date/time stamp.</li>
+<li><strong>ID:</strong> A unique, human-readable ID for the sample.</li>
+<li><strong>description:</strong> A free text field for additional information.</li>
+</ul>
+<p>Additional subsections available in the <em>data</em> subsection include:</p>
+<ul>
+<li><strong>elemental composition:</strong> Define the chemical composition with atomic and mass fractions.</li>
+<li><strong>components:</strong> Specify the components used to create the sample, including raw materials or system components.</li>
+<li><strong>sample identifier:</strong> Add unique identifiers for the sample.</li>
+</ul>
+</details>
+<details class="task">
+<summary>Task: Create an ELN entry for a sample (ca. 1 minute)</summary>
+<p>Create an ELN entry in NOMAD for one of the following samples:</p>
+<ul>
+<li>P3HT Thin Film  </li>
+<li>P3HT Solution  </li>
+</ul>
+<p>Use the <em>Generic Sample ELN</em> schema and include as many details as you like (e.g., Short Name, Datetime, ID, Description).  </p>
+<blockquote>
+<p><strong>Tip:</strong> Follow the <a href="#create-an-entry-using-nomads-built-in-schema">steps for creating an entry</a>.</p>
+</blockquote>
+</details>
+<h3 id="create-an-instrument-entry">Create an instrument entry<a class="headerlink" href="#create-an-instrument-entry" title="Permanent link">&para;</a></h3>
+<p>Now, let's create an entry using the built-in <em>Instrument ELN</em> schema for <strong>UV Ozone Cleaner</strong>. Follow the steps for <a href="#create-an-entry-using-nomads-built-in-schema">creating an entry using NOMAD's Built-in Schema.</a> and select <em>Instrument ELN</em> in step 3.</p>
+<details class="example">
+<summary>Example: Creating an entry for UV Ozone Cleaner (screenshots)</summary>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_instrument_eln_step_1.png" alt="create built-in schema for instrument" width="800">
+</div></p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_instrument_eln_step_2_3_4.png" alt="create built-in schema for instrument" width="800">
+</div></p>
+</details>
+<details class="info">
+<summary>The input data fields that the built-in schema <em>Instrument ELN</em> offers:</summary>
+<p>The built-in schema <em>Instrument ELN</em> provides the following fields for input:</p>
+<ul>
+<li><strong>name:</strong> Automatically used as the entry file name.</li>
+<li><strong>datetime:</strong> Allows entry of a date/time stamp.</li>
+<li><strong>ID:</strong> A unique, human-readable ID for the instrument.</li>
+<li><strong>description:</strong> A free text field for additional information.</li>
+</ul>
+<p>Additional subsections available in the <em>data</em> subsection include:</p>
+<ul>
+<li><strong>instrument identifiers:</strong> Specify the type of instrument and additional metadata, if applicable.</li>
+</ul>
+</details>
+<details class="task">
+<summary>Task: Create an ELN entry for an instrument (ca. 1 minute)</summary>
+<p>Create an ELN entry in NOMAD for one of the following instruments:</p>
+<ul>
+<li>Ultrasonic Bath  </li>
+<li>Scale  </li>
+<li>Optical Spectrometer  </li>
+<li>Conductivity Board  </li>
+<li>Spin Coater  </li>
+</ul>
+<p>Use the <em>Instrument ELN</em> schema and include as many details as you like (e.g., name, datetime, ID, description).  </p>
+<blockquote>
+<p><strong>Tip:</strong> Follow the <a href="#create-an-entry-using-nomads-built-in-schema">steps for creating an entry</a>.</p>
+</blockquote>
+<p>```md</p>
+</details>
+<h3 id="create-a-process-entry">Create a process entry<a class="headerlink" href="#create-a-process-entry" title="Permanent link">&para;</a></h3>
+<p>Now, let's create an entry using the built-in <em>Material Processing ELN</em> schema for <strong>Preparation of P3HT solution in chloroform</strong>. Follow the steps for <a href="#create-an-entry-using-nomads-built-in-schema">creating an entry using NOMAD's Built-in Schema.</a> and select <em>Material Processing ELN</em> in step 3.</p>
+<details class="example">
+<summary>Example: Creating an entry for P3HT solution preparation (screenshots)</summary>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_1.png" alt="create built-in schema" width="800">
+</div></p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_2_3_4.png" alt="create built-in schema" width="800">
+</div></p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_5_6.png" alt="create built-in schema" width="800">
+</div></p>
+</details>
+<details class="info">
+<summary>The input data fields that the built-in schema <em>Material Processing ELN</em> offers:</summary>
+<p>The <em>Material Processing ELN</em> schema provides the following fields for input:</p>
+<ul>
+<li><strong>name:</strong> Automatically used as the entry file name.</li>
+<li><strong>starting time and ending time:</strong> Allows entry of a date/time stamp for the process duration.</li>
+<li><strong>ID:</strong> A unique, human-readable ID for the process.</li>
+<li><strong>location:</strong> A text field specifying the location where the process took place.</li>
+<li><strong>description:</strong> A free text field for additional information about the process.</li>
+</ul>
+</details>
+<details class="example">
+<summary>Continue the above example: Fill sdditional subsections available in the <em>data</em> subsection (screenshots):</summary>
+<p>Additional subsections available in the <em>data</em> subsection include (screenshots): </p>
+<ul>
+<li><strong>steps:</strong> Define the step-by-step procedure for the material processing. Here we add 3 steps for our process: polymer weighing, solvent filling, and mixing. to do this use the <strong>+</strong> in front of the <strong>steps</strong> subsection and add process step name and description. Don't forget to save after each step, and make sure you make the steps in order, because you cannot reorder them later. (see screenshots)</li>
+</ul>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_6_to_11.png" alt="create built-in schema" width="800">
+</div></p>
+<ul>
+<li><strong>instruments:</strong> List the instruments used in the process. (screenshots)</li>
+</ul>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_12_13.png" alt="create built-in schema" width="800">
+</div></p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_14_15_16.png" alt="create built-in schema" width="800">
+</div></p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_17.png" alt="create built-in schema" width="800">
+</div></p>
+<ul>
+<li><strong>samples:</strong> Specify the samples that are created or used in the process. Continue by adding the connection of your process to the resulting sample entities. (screenshot)</li>
+</ul>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_18_19_20.png" alt="create built-in schema" width="800">
+</div></p>
+<p>Note that the added information in the <strong>subsections</strong> will be used to automatically fill in the <strong>Workflow Graph</strong> as <strong>tasks</strong>, as well as <strong>the References section</strong>. You can find the <strong>Workflow Graph</strong>, in <strong>OVERVIEW</strong> tab of the entry. (screenshot)</p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/workflow_graph.png" alt="create built-in schema" width="400">
+</div></p>
+<p>You can modify the workflow section by adding additional information such as <strong>inputs</strong>, <strong>additional tasks</strong>, and <strong>outputs</strong>. You can do this in the <strong>workflow2</strong> section. The <strong>workflow2</strong> section of the solution preparation example (ELNProcess) can be reached within the <strong>solution preparation</strong> entry -&gt; <strong>DATA tab</strong> -&gt; in the left side pane location <strong>workflow2</strong> section. We can now add inputs, either by <strong>referencing to an existing entry</strong> (e.g., the <em>ELNSubstance</em> we made for P3HT powder),:</p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_21_22_23_24.png" alt="create built-in schema" width="800">
+</div></p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_25_26_27.png" alt="create built-in schema" width="800">
+</div></p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_28.png" alt="create built-in schema" width="800">
+</div></p>
+<p>or by directly creating a new entry directly in the current <em>ELNprocess</em> (e.g., chloroform based on <em>ELNSubstance</em> in the following screenshots):</p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_29_30_31.png" alt="create built-in schema" width="800">
+</div></p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_32_33_34.png" alt="create built-in schema" width="800">
+</div></p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/create_material_processing_eln_step_35_36.png" alt="create built-in schema" width="800">
+</div></p>
+<p>once the inputs P3HT and chloroform were added as inputs, you can check the updated <strong>Wrokflow Graph</strong> in the <strong>OVERVIEW</strong> tab:</p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/workflow_graph_2.png" alt="create built-in schema" width="400">
+</div>    </p>
+</details>
+<h3 id="create-a-measurement-entry">Create a measurement entry<a class="headerlink" href="#create-a-measurement-entry" title="Permanent link">&para;</a></h3>
+<p>Similar to the examples given above, you can also create an entry using the built-in <em>Measurement ELN</em> schema for your measurements.</p>
+<details class="example">
+<summary>Example: Creating an entry for Optical Absorption Measurement (steps)</summary>
+<ul>
+<li>Follow the steps for <a href="#create-an-entry-using-nomads-built-in-schema">creating an entry using NOMAD's Built-in Schema.</a> and select <em>Measurement ELN</em> in step 3.</li>
+<li>Use the referencing option to the existing entries, or create new entries to connect to your <em>Measurement ELN</em>, similar to the steps <strong>13-17</strong> and <strong>31-36</strong> in the <a href="#built-in-schema-for-material-processing-eln">Built-in Schema for Material Processing</a>.</li>
+</ul>
+</details>
+<details class="info">
+<summary>Key input fields in <em>Measurement ELN</em>:</summary>
+<ul>
+<li>Similar to other entries, we have <strong>name</strong>, <strong>starting Time</strong>, <strong>ID</strong>, <strong>location</strong>, <strong>description</strong>.</li>
+<li>Subsections such as <strong>steps</strong>, <strong>samples</strong>, <strong>instruments</strong> used in measurement.</li>
+</ul>
+</details>
+<h3 id="integrate-your-experiment">Integrate your experiment<a class="headerlink" href="#integrate-your-experiment" title="Permanent link">&para;</a></h3>
+<p>Once all substances, samples, processes, and measurements are defined, you can integrate them into a structured workflow using the <em>Experiment ELN</em> schema. The <em>Experiment ELN</em> schema allows linking <strong>processes</strong> and <strong>measurements</strong> into a single entry for a comprehensive overview of your experiment.</p>
+<details class="example">
+<summary>Example: Creating an Experiment ELN Entry (steps)</summary>
+<ul>
+<li>Create an entry using the built-in <strong>Experiment ELN</strong> schema.</li>
+<li>Provide a <strong>name</strong>, <strong>description</strong>, and link relevant <strong>processes</strong> and <strong>measurements</strong>.</li>
+<li>Save the entry to establish a structured record of your experiment.
+Following, you see screensots of how your experiment entry and workflow graph will look like <strong>after</strong> you integrated your <strong>processes</strong> and <strong>measurements</strong> to your <strong>experiment</strong>.</li>
+</ul>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/steps2.gif" alt="create built-in schema" width="800">
+</div></p>
+<p>the data section looks like the following:</p>
+<p><div style="text-align: center;">
+    <img src="images/create_built-in_schema/steps3.png" alt="create built-in schema" width="400">
+</div>
+The <strong>Workflow Graph</strong> automatically updates and will look similar to the following
+<div style="text-align: center;">
+    <img src="images/create_built-in_schema/interactive_work_flow.gif" alt="interactive workflow gif" width="400">
+</div>  </p>
+</details>
+<h2 id="exploring-and-searching-entries-in-nomads-eln">Exploring and Searching Entries in NOMAD’s ELN<a class="headerlink" href="#exploring-and-searching-entries-in-nomads-eln" title="Permanent link">&para;</a></h2>
+<details class="example">
+<summary>Download the example file for this excercise</summary>
+<p>We have prepared a compressed file for this task, which can be downloaded from this <a href="https://github.com/FAIRmat-NFDI/FAIRmat-tutorial-16/raw/refs/heads/main/tutorial_16_materials/part_4_files/example_NOMAD_ELN.zip">link</a>.</p>
+<p>The file contains multiple NOMAD ELN entries in <code>.json</code> format.</p>
+<p>These entries have been created using the NOMAD ELN built-in schema, organized into folders, and categorized with custom tags.</p>
+<p>You can drag and drop this file into a new upload in NOMAD to view its contents.</p>
+</details>
+<p>Imagine you have created multiple entries of substances, samples, instruments, processes, and measurements, and you need to quickly find a specific experiment or material. Instead of manually searching through files, NOMAD’s ELN allows you to search, filter, and organize your entries—saving you time and effort.</p>
+<details class="info">
+<summary>Organizing your ELN upload</summary>
+<p>NOMAD is a file-based system. You can access, organize, and download your files within each upload. You can also create folders to categorize entries into materials, samples, instruments, processes, and results, as well as upload additional documents, such as relevant PDFs.</p>
+<div class="admonition warning">
+<p class="admonition-title">If you plan to organize your entries into separate folders, do so before you reference them to each other. Moving them afterward may break the reference links.</p>
+</div>
+<p>You can follow these steps to organize your ELN entries:</p>
+<ol>
+<li>
+<p>Navigate to the <strong>FILES</strong> tab in your upload. This view functions like a file explorer, allowing you to view and manage files. 
+<div style="text-align: center;">
+<img src="images/organization/files_explorer_in_NOMAD.png" alt="interactive workflow gif" width="400">
+</div>  </p>
+</li>
+<li>
+<p>Add new folders and organize them according to your needs.
+<div style="text-align: center;">
+    <img src="images/organization/creating_new_folders.gif" alt="interactive workflow gif" width="400">
+</div></p>
+</li>
+<li>
+<p>Drag and drop files into the desired folder. A prompt will appear, asking if you want to copy or move the files—choose according to your needs.
+<div style="text-align: center;">
+    <img src="images/organization/moving_files_to_a_folder.gif" alt="interactive workflow gif" width="400">
+</div></p>
+</li>
+<li>
+<p>Once all files are sorted, take a moment to review the structure. Here’s an example of an organized ELN
+<div style="text-align: center;">
+    <img src="images/organization/after_organization.png" alt="interactive workflow gif" width="400">
+</div>  </p>
+</li>
+</ol>
+</details>
+<p><strong>Searching your ELN entries</strong></p>
+<p>To search for entries in your ELN, follow these steps:</p>
+<ol>
+<li>
+<p>on the top of the ELN upload page, click on the <img src="images/organization/icon_search_upload.png" alt="Search ELN icon" width="20"> icon.</p>
+<p><img alt="screenshot of step 1" src="images/organization/explore_ELN_step_1.png" /></p>
+</li>
+<li>
+<p>From the drop-down menu, select <em>Entries</em>.</p>
+<p><img alt="screenshot of step 2" src="images/organization/explore_ELN_step_2.png" /></p>
+<p>This will open NOMAD's <strong>EXPLORE</strong> page with a filter applied to display only the entries from your upload.  </p>
+<p><img alt="screenshot of NOMAD EXPLORE page wiht the filter applied" src="images/organization/explore_ELN_step_2r.png" /></p>
+</li>
+</ol>
+<p>On the <strong>EXPLORE</strong> page, you can use the filter options in the sidebar to refine your search, enter specific keywords in the search bar to find relevant entries, or create custom widgets to visualise your ELN data. </p>
+<details class="info">
+<summary>Filtering entries in NOMAD</summary>
+<p>NOMAD provides various filters that can be used to efficiently find your ELN entries, but the following two filters are particularlly effective: </p>
+<ul>
+<li>
+<p>Filter by built-in schema used to create the entry.</p>
+<p><em>For example, ELNInstrument, ELNSubstances, ELNSample, etc.</em></p>
+</li>
+<li>
+<p>Filter by custom tags, where you assign common tags to related entries for easy grouping.</p>
+<p><em>For example, tag all solvents as "my_solvent" or all samples as "my_samples".</em></p>
+</li>
+</ul>
+<p>Using these filters helps you quickly locate specific entries in your ELN.</p>
+</details>
+<p><strong>Customize your search interface with widgets</strong></p>
+<p>Widgets allow you to customize your search interface to better suit your data exploration needs. By adding and rearranging widgets, you can create a personalized view that highlights the most relevant filters, metadata, or visualizations most relevant to your research.</p>
+<details class="task">
+<summary>Create a custom widget for ELN sections and custom tags</summary>
+<p>To create a custom widget for filtering your ELN, follow these steps:</p>
+<ol>
+<li>Click on the <code>+ TERMS</code> button to open the <em>Edit terms widget</em> menu.</li>
+</ol>
+<p><div style="text-align: center;">
+    <img src="images/organization/widget_step_1.png" alt="Screenshot of the Edit terms widget menu" width="800">
+</div></p>
+<ol>
+<li>
+<p>In the <em>Search quantity</em> field, type <em>eln</em>. A list of available filters will appear.</p>
+</li>
+<li>
+<p>Select <code>results.eln.sections</code> from the list. This will enable filtering based on the built-in ELN sections available in your ELN upload.</p>
+</li>
+</ol>
+<p><div style="text-align: center;">
+    <img src="images/organization/widget_step_2_3.png" alt="Screenshot of selecting results.eln.sections filter" width="400">
+</div></p>
+<ol>
+<li>
+<p>Write a descriptive title for the custom widget in <em>Title field</em>.</p>
+</li>
+<li>
+<p>Click DONE!</p>
+</li>
+</ol>
+<p><div style="text-align: center;">
+    <img src="images/organization/widget_step_4_5.png" alt="Screenshot of finalizing the custom widget" width="400">
+</div></p>
+<p>The new ELN sections widget now appears at the top of your <strong>EXPLORE</strong> page and displays ELN entry types along with their corresponding counts.</p>
+<p><div style="text-align: center;">
+    <img src="images/organization/widget_step_5r.png" alt="Screenshot of the newly created ELN sections widget" width="400">
+</div></p>
+<p>You can now follow the same steps to create a custom widget for filtering by custom tags.</p>
+<p>In Step 3, instead of selecting <code>results.eln.sections</code>, choose <code>results.eln.tags</code>. This will create a widget that filters your ELN entries based on the custom tags you have assigned.</p>
+<p>This widget will then appear on your <strong>EXPLORE</strong> page, allowing you to quickly view and filter entries by their associated tags.</p>
+<p><div style="text-align: center;">
+    <img src="images/organization/explore_you_ELN_entries.gif" alt="Animation of filtering using widgets" width="800">
+</div></p>
+</details>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../T16_5/T16_5_create_a_dataset.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Create a Dataset" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Create a Dataset
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../T16_7/T16_7_create_custom_eln_templates.html" class="md-footer__link md-footer__link--next" aria-label="Next: Create Custom ELN Templates" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Create Custom ELN Templates
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.footer", "content.code.copy"], "search": "../assets/javascripts/workers/search.c7dec7e7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.da79ceb7.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
