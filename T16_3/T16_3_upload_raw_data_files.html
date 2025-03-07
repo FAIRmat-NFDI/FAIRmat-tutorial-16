@@ -1,0 +1,1038 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutorial 16  materials
+">
+      
+      
+        <meta name="author" content="FAIRmat Area F">
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.1.1">
+    
+    
+      
+        <title>Upload Raw Data Files - FAIRmat Tutorial 16</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.23b6d78a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font:"Titillium Web";--md-code-font:""}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="#2a4cdf" data-md-color-accent="#008a67">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#task-1-create-new-upload" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://www.fairmat-nfdi.eu/fairmat/" title="FAIRmat Tutorial 16" class="md-header__button md-logo" aria-label="FAIRmat Tutorial 16" data-md-component="logo">
+      
+  <img src="../assets/fairmat-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FAIRmat Tutorial 16
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Upload Raw Data Files
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FAIRmat-NFDI/FAIRmat-tutorial-16" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.fairmat-nfdi.eu/fairmat/" title="FAIRmat Tutorial 16" class="md-nav__button md-logo" aria-label="FAIRmat Tutorial 16" data-md-component="logo">
+      
+  <img src="../assets/fairmat-logo.png" alt="logo">
+
+    </a>
+    FAIRmat Tutorial 16
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FAIRmat-NFDI/FAIRmat-tutorial-16" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Contents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T16_2/T16_2_explore_data_records.html" class="md-nav__link">
+        Explore NOMAD entries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Upload Raw Data Files
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="T16_3_upload_raw_data_files.html" class="md-nav__link md-nav__link--active">
+        Upload Raw Data Files
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#task-1-create-new-upload" class="md-nav__link">
+    Task 1: Create new upload
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-2-share-your-upload-with-a-colleague" class="md-nav__link">
+    Task 2: Share your upload with a colleague
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-3-add-files-to-your-upload" class="md-nav__link">
+    Task 3: Add files to your upload
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 3: Add files to your upload">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-31-uploading-miscellaneous-files" class="md-nav__link">
+    Task 3.1: Uploading miscellaneous files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-32-uploading-computations-data-files" class="md-nav__link">
+    Task 3.2: Uploading computations data files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-33-uploading-experiments-data-files" class="md-nav__link">
+    Task 3.3: Uploading experiments data files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T16_5/T16_5_create_a_dataset.html" class="md-nav__link">
+        Create a Dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T16_6/T16_6_document_your_research.html" class="md-nav__link">
+        Document Your Research
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T16_7/T16_7_create_custom_eln_templates.html" class="md-nav__link">
+        Create Custom ELN Templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T16_8/T16_8_write_a_custom_parser.html" class="md-nav__link">
+        Use Tabular Parser
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#task-1-create-new-upload" class="md-nav__link">
+    Task 1: Create new upload
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-2-share-your-upload-with-a-colleague" class="md-nav__link">
+    Task 2: Share your upload with a colleague
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-3-add-files-to-your-upload" class="md-nav__link">
+    Task 3: Add files to your upload
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 3: Add files to your upload">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-31-uploading-miscellaneous-files" class="md-nav__link">
+    Task 3.1: Uploading miscellaneous files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-32-uploading-computations-data-files" class="md-nav__link">
+    Task 3.2: Uploading computations data files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-33-uploading-experiments-data-files" class="md-nav__link">
+    Task 3.3: Uploading experiments data files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  <h1>Upload Raw Data Files</h1>
+
+<p><strong>The key elements in NOMAD</strong></p>
+<p>To get started in the journey of uploading raw files to publishing datasets with DOI in NOMAD, you will need to understand the key elements of this process in NOMAD:</p>
+<ol>
+<li>NOMAD Users</li>
+<li>Uploads</li>
+<li>Entries</li>
+<li>Datasets</li>
+</ol>
+<p>In order to upload data into NOMAD, a <strong>user account</strong> is required. 
+You can create a user account by following these <a href="materials/CreateaNOMADaccount.pdf">steps</a>.</p>
+<p>All files and data created by users are organized in NOMAD as <strong>Uploads</strong>, which function as directories within the user’s account. You can create an upload for each project and structure it into nested folder directories for better organization.</p>
+<p>Research data in the form of raw files are added to uploads. If NOMAD has a built-in parser for the file formats, it automatically processes the files and creates <strong>Entries</strong>. These entries represent structured data extracted from the raw files.</p>
+<p>Entries can be grouped into <strong>Datasets</strong>, which allow for better organization of related data. Once the dataset is complete, it can be published with a DOI, making the research data findable, accessible, interoperable, and reusable (FAIR).</p>
+<details class="info">
+<summary>Key features of NOMAD <strong>Uploads</strong></summary>
+<ul>
+<li><strong>Creation:</strong> Uploads are created and managed by users.</li>
+<li><strong>Structure:</strong> Uploads are associated to a user account and are listed in the <em>my uploads</em> page in the GUI. They serve as containers for multiple files and entries, preserving their directory structure and metadata. </li>
+<li><strong>Organization:</strong> Each upload can contain multiple files organized into directories.</li>
+<li><strong>Sharing &amp; Publishing:</strong> Entries and files can only be shared, transferred, or published as complete uploads.</li>
+</ul>
+</details>
+<details class="info">
+<summary>Key features of NOMAD <strong>Entries</strong></summary>
+<ul>
+<li><strong>Creation:</strong> Entries are automatically generated by NOMAD from uploaded raw files or instantiated schemas.</li>
+<li><strong>Structure:</strong> Entries are distinct data entities that can be searched and viewed through dedicated pages in the NOMAD GUI.  </li>
+<li><strong>Organization:</strong> Entries belong to specific uploads and are linked to a raw file that NOMAD has recognized and parsed.  </li>
+<li><strong>Sharing &amp; Publishing:</strong> Entries can be shared as part of an upload, and individual entries can be added to datasets, which can be published with a DOI.  </li>
+</ul>
+</details>
+<details class="info">
+<summary>Key features of NOMAD <strong>Datasets</strong></summary>
+<ul>
+<li><strong>Creation:</strong> Datasets are created and managed by users.</li>
+<li><strong>Structure:</strong> Datasets are associated to a user account and are listed in the <em>Your datasets</em> page in the GUI. They serve as containers for curated and related data entires. </li>
+<li><strong>Organization:</strong> Datasets conatins several entries from various uploads. One entry can be contained in many dataset.</li>
+<li><strong>Sharing &amp; Publishing:</strong> Datasets are published independent of uploads and you can get a DOI for your datasets.</li>
+</ul>
+</details>
+<p>For more detailed explanation, you can refer to the <a href="https://nomad-lab.eu/prod/v1/docs/explanation/basics.html">NOMAD documentation page</a>. </p>
+<h3 id="task-1-create-new-upload">Task 1: Create new upload<a class="headerlink" href="#task-1-create-new-upload" title="Permanent link">&para;</a></h3>
+<p>The uploads exist in the <em>Your uploads</em> page. You can reach there by clicking on <strong>Uploads</strong> in the <strong>PUBLISH</strong> menu.</p>
+<p>Here you can view a list of all your uploads with their relevant information. </p>
+<p>You can also create new uploads or add an example upload prepared by others.</p>
+<p><img alt="Navigate to &quot;Your uploads&quot; page by hovering over the Publish menu, then clicking on uploads" src="images/navigating_to_uploads_cropped.png" />
+To create a new upload, click on the <code>CREATE A NEW UPLOAD</code> button. </p>
+<p>A new page will open and an upload ID will be automatically assigned.</p>
+<p><img alt="Create a new upload by clicking on the blue button" src="images/create_new_upload.png" /></p>
+<details class="info">
+<summary>Two different views of the <strong>upload</strong> page</summary>
+<p>At the very top of the upload page, you can toggle between two different views for this page:</p>
+<ul>
+<li><strong>Overview:</strong> This view includes all the tools needed to manage your upload, along with guided steps to start uploading your files to NOMAD. It will also show all the processed files (entries) that you will upload. 
+<img alt="a screenshot of the uploads overview page" src="images/upload_overview_page.png" /></li>
+<li><strong>Files:</strong> This view shows all the files included in upload, whether they are raw files or processed files. You can also organize these files into folders as needed. 
+<img alt="A screenshot of the uploads files page" src="images/uploads_files_page.png" /></li>
+</ul>
+</details>
+<p>When you create a new upload, it is automatically assigned the default name <em>unnamed upload</em>.</p>
+<p>To rename it, click on the <img src="images/change_name_icon.png" alt="Change Name Icon" width="20"> icon next to the name. </p>
+<p>This will make the name field editable, allowing you to enter a clear and descriptive name. Once you're done, click <code>SAVE</code> to apply the changes.
+<img alt="Alt text" src="images/create_upload_step_4.png" />
+<img alt="Alt text" src="images/create_upload_step_5_6.png" /></p>
+<h3 id="task-2-share-your-upload-with-a-colleague">Task 2: Share your upload with a colleague<a class="headerlink" href="#task-2-share-your-upload-with-a-colleague" title="Permanent link">&para;</a></h3>
+<p>Uploads in NOMAD can be shared and published.</p>
+<p>When you share/publish an upload, all included entries and files will be shared/published.</p>
+<details class="info">
+<summary>What is the difference between sharing and publishing an Upload?</summary>
+<p><strong>Sharing an upload</strong> allows you to grant access to colleagues or collaborators while working on it. </p>
+<ul>
+<li>This facilitates collaboration on projects or enables progress reviews during the project. </li>
+<li>You can invite individuals with either read/write access (coauthors) or read-only access (reviewers).</li>
+</ul>
+<p><strong>Publishing an upload</strong> makes it searchable, findable, and accessible on NOMAD for everyone. </p>
+<ul>
+<li>Once published, the upload becomes immutable, meaning its contents can no longer be modified. </li>
+<li>You also have the option to publish with an embargo period, temporarily restricting public access until the embargo expires. </li>
+</ul>
+</details>
+<p>A NOMAD upload can have four states based on sharing and publishing:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Icon</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Private</td>
+<td><img src="images/icon_unpublished.png" alt="Icon of private upload" width="20"></td>
+<td>The upload is private and is visible to the uploader only.</td>
+</tr>
+<tr>
+<td>Shared</td>
+<td><img src="images/icon_shared.png" alt="Icon of shared upload" width="20"></td>
+<td>The upload is accessible to selected users but not publicly available.</td>
+</tr>
+<tr>
+<td>Published</td>
+<td><img src="images/icon_published.png" alt="Icon of published upload" width="20"></td>
+<td>The upload is publicly available to everyone.</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td><img src="images/icon_visible.png" alt="Icon of visible upload" width="20"></td>
+<td>The upload is unpublished but accessible to everyone.</td>
+</tr>
+</tbody>
+</table>
+<p>You can manage upload sharing in the <em>Edit upload members</em> menu. To access it, click on <img src="images/edit_upload_members_icon.png" alt="Edit upload members Icon" width="20"> available on the top of the upload page. at the top of the upload page. </p>
+<p>Alternatively, you can click the <code>EDIT UPLOAD MEMBERS</code> button below the list of entries on your upload page.</p>
+<details class="task">
+<summary>Share your upload</summary>
+<p><img src="images/icon_shared.png" alt="Icon of shared upload" width="30"></p>
+<p><strong>Step 1:</strong> Open the <em>Edit upload members</em> window, but clicking on the <code>EDIT UPLOAD MEMBERS</code> button.</p>
+<p><strong>Step 2:</strong> Start typing the name of the NOMAD user you want to share the upload with. A list of matching users will appear—select the correct name from the list.</p>
+<p><strong>Step 3:</strong> Assign a role to the user by selecting either Coauthor or Reviewer from the dropdown menu.
+    - Coauthors can edit and add files to the upload.
+    - Reviewers can only view the contents of the upload (no editing rights).</p>
+<p><strong>Step 4:</strong> Click on <em>submit</em>. </p>
+<p><img alt="screenshots of the steps of sharing your upload" src="images/sharing_an_upload.png" /></p>
+</details>
+<details class="task">
+<summary>Make your upload visible to everyone</summary>
+<p><img src="images/icon_visible.png" alt="Icon of shared upload" width="30"></p>
+<p>To make your upload visible to everyone on NOMAD, simply check the box in the <em>Edit visibility and access</em> section, located under the list of your entries. </p>
+<p>This setting allows all users, including guests without an account, to view the upload even before it is published.</p>
+<p>You can still modify the upload’s access settings and edit its contents while it remains visible.</p>
+<p><img alt="screenshot of the steps of making an upload visible" src="images/making_an_upload_visible.png" /></p>
+</details>
+<details class="task">
+<summary>Publish your upload</summary>
+<p><img src="images/icon_published.png" alt="Icon of shared upload" width="30"></p>
+<div class="admonition warning">
+<p class="admonition-title">Once an upload is published, it can not be deleted, and the files and entries can not be changed</p>
+</div>
+<p><strong>Step 1:</strong> Select an embargo period (if needed) from the dropdown menu, located in the <em>publish</em> section located at the bottom of the upload page. </p>
+<p>If you would like to publish immediatly, select <em>No embargo</em>.</p>
+<p><strong>Step 2:</strong> Click on the <code>PUBLISH</code> button.</p>
+<p><strong>Step 3:</strong> A prompt for confirmation appears on the screen. Click on PUBLISH. </p>
+<p><img alt="screenshots of the steps to publish an upload" src="images/publishing_an_upload.png" /></p>
+<p>Having an embarog on your data means:
+    - Raw files and entries remain hidden, except to you and users you share the data with.
+    - Some metadata (e.g., chemical formula, system type, spacegroup) will be public.
+    - Embargoed entires can be added to datasets and be assigned DOIs.
+    - The embargo can be lifted eariler than the assigned duration by the user. </p>
+<p>The following image shows an example of an embargoed upload and the option to lift the embargo by clicking the <code>LIFT EMBARGO</code> button.</p>
+<p><img alt="screenshot of an embargoed upload" src="images/embargoed_upload.png" /></p>
+</details>
+<h3 id="task-3-add-files-to-your-upload">Task 3: Add files to your upload<a class="headerlink" href="#task-3-add-files-to-your-upload" title="Permanent link">&para;</a></h3>
+<p>Lets start adding files to your NOMAD upload. We will explore three different examples:</p>
+<ol>
+<li>Miscellaneous Files.</li>
+<li>Files of DFT calculation on Iron(III) Oxide.</li>
+<li>Files of x-ray photoelectron spectroscopy (XPS) measurement on polymers. </li>
+</ol>
+<p>Files can be added to an upload individually, or you can group them into a compressed file in <code>.zip</code> or <code>.tar</code> formats. </p>
+<details class="info">
+<summary>Different ways and senarious to upload files to NOMAD</summary>
+<p>In NOMAD, files can be uploaded in different ways, but whether they are processed into Entries or not depends on their format and NOMAD’s built-in parsers. Here’s how it works: </p>
+<p><strong>Files that are processed by NOMAD</strong></p>
+<ul>
+<li>
+<p>These are files that are recognized by NOMAD, meaning that <strong>a built-in parser exists</strong> for the file you uploaded, the file will be processed according to a data schemas. </p>
+</li>
+<li>
+<p>It means that NOMAD reads the file, extracts data and organizes them based on the data schema which allows for generating visualizations, and analysis automations. </p>
+</li>
+<li>
+<p>Raw files that are processed in NOMAD become <strong>Entries</strong></p>
+</li>
+<li>
+<p>This is common for simulation files since they follow standardized structures. Also a variety of experimental data organized in NeXus format <code>.nxs</code> are recognized by NOMAD.</p>
+</li>
+</ul>
+<p><strong>Files that are not processed by NOMAD</strong></p>
+<ul>
+<li>
+<p>These are files that <strong>do not have a built-in parser</strong>, meaning NOMAD cannot automatically extract and structure their data.</p>
+</li>
+<li>
+<p>They are still stored in NOMAD as part of your upload, and can be downloaded or shared, but they do not become entries in the database.</p>
+</li>
+<li>
+<p>NOMAD allows you to preview common file formats that are not automatically parsed. This means you can view the contents of the file directly within the platform without having to download it. Examples include: <code>.txt</code>, <code>.csv</code>, <code>.pdf</code>, <code>.png</code>, <code>.jpg</code>.</p>
+</li>
+</ul>
+</details>
+<h4 id="task-31-uploading-miscellaneous-files">Task 3.1: Uploading miscellaneous files<a class="headerlink" href="#task-31-uploading-miscellaneous-files" title="Permanent link">&para;</a></h4>
+<details class="example">
+<summary>Download the example files for this excercise</summary>
+<p>We have prepared a set of files for this task that can be downloaded from this <a href="https://github.com/FAIRmat-NFDI/FAIRmat-tutorial-16/raw/refs/heads/main/tutorial_16_materials/part_3_files/example_files_upload/miscellaneous_data/miscellaneous_data.zip">link</a>.</p>
+<p>Download the folder, then uncompress it on your local machine at you preferred directory.</p>
+<p>The folder contains files of the following formats: <code>.zip</code>, <code>.pdf</code>, <code>.jpg</code>, <code>.txt</code>, and <code>.csv</code>.</p>
+<table>
+<thead>
+<tr>
+<th>file name</th>
+<th>format</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FAIRmat_graphics</td>
+<td>.zip</td>
+<td>Compressed file that contains several FAIRmat logos in <code>.png</code> format</td>
+</tr>
+<tr>
+<td>JOSS_2023</td>
+<td>.pdf</td>
+<td>A publication of NOMAD in the Journal of Open Source Software</td>
+</tr>
+<tr>
+<td>Nature_2022</td>
+<td>.pdf</td>
+<td>A publication of FAIRmat in Nature journal</td>
+</tr>
+<tr>
+<td>P3HT_optical_absorption</td>
+<td>.csv</td>
+<td>Results of absorption measurement on P3HT from PerkinElmer spectrometer</td>
+</tr>
+<tr>
+<td>note_properties_of_good_dopants</td>
+<td>.txt</td>
+<td>Notes recorded during a conference talk</td>
+</tr>
+<tr>
+<td>experiment_polymer_doping</td>
+<td>.jpg</td>
+<td>A photograph of an experiment of preparing doped polymer solutions</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>Note that these files will not create entires in NOMAD, because a built-in parser for them doesn't exist. </p>
+<p>They will be stored in your upload and can be accessed and shared with your colleagues, however, they will not be searchable within NOMAD. In this case, NOMAD acts as a typical storage cloud!</p>
+<p>You can add these files to your NOMAD upload. Do so by simply drag and drop the file or by opening the dialog to browse the files in your device.</p>
+<details class="task">
+<summary>Uploading images, pdf files, text files, and tabular data</summary>
+<p><strong>Drag and drop</strong></p>
+<p>Start with uploading the file <code>FAIRmat_graphics.zip</code>. Lets use the drag and drop method as shown in the animation below. </p>
+<p><img alt="An animatation demonstrating the drag-and-drop files in NOMAD " src="images/example_3-1_drag_drop_files.gif" /></p>
+<p>When a compressed file is uploaded to NOMAD, it will be extracted automatically and the included files will be added to your upload.</p>
+<p><strong>Open the file browser dialog</strong></p>
+<p>Upload the remaining files using the file browser dialog as shown in the animation below. </p>
+<p><img alt="An animatation demonstrating the open from file browser dialog in NOMAD " src="images/example_3-1_file_browser_dialog.gif" /></p>
+</details>
+<h4 id="task-32-uploading-computations-data-files">Task 3.2: Uploading computations data files<a class="headerlink" href="#task-32-uploading-computations-data-files" title="Permanent link">&para;</a></h4>
+<details class="example">
+<summary>Download the example files for this excercise</summary>
+<p>We have prepared a set of files for this task that can be downloaded from this <a href="https://github.com/FAIRmat-NFDI/FAIRmat-tutorial-16/raw/refs/heads/main/tutorial_16_materials/part_3_files/example_files_upload/computations_data/FHI-aims.zip">link</a>. </p>
+<p>Download the folder to your local machine at you preferred directory.</p>
+<p>This folder contains the input and output files of a DFT calculation for Iron(III) Oxide using the <em>FHI-aims</em> code.</p>
+<p>FHI-aims* an all-electron density-functional-theory package that employs numeric atom-centered basis functions. It is designed for accurate and efficient simulations of molecules, clusters, surfaces, and bulk materials across the periodic table. Its advanced treatment of electronic structure allows for precise calculations of material properties, including band structures, total energies, and magnetic properties. <a href="https://fhi-aims.org/">More information in this link</a></p>
+</details>
+<p>The calculations in this example were preformed using a code that is supported by NOMAD, i.e. the <em>FHI-aims</em> code.  </p>
+<p>NOMAD has a parser for the <em>FHI-aims</em> code. This means it will create an <strong>Entry</strong> for these data. </p>
+<p>In other words, NOMAD will read the input and output files and provide all information in NOMAD's unified <em>metainfo</em> data schema.</p>
+<details class="task">
+<summary>Uploading input and output files <code>.zip</code> of a DFT calculation</summary>
+<p><strong>Uploading the files</strong></p>
+<p>Start with uploading the file <code>FHI-aims.zip</code>. Lets use the drag and drop method as shown in the animation below. </p>
+<p><img alt="Animation of darg and droping a compressed file in NOMAD" src="images/example_3-2_drag_drop_files.gif" /></p>
+<p>After uploading files, processing is automatically triggered. This involves identifying supported file formats in NOMAD and extracting relevant (meta)data. The exact processing steps depend on the use case.
+For example, you can learn more about the <a href="https://nomad-lab.eu/prod/v1/docs/examples/computational_data/uploading.html#processing-of-computational-data">processing of computational data on this link</a>.</p>
+<p>Once processing is complete, NOMAD generates an Entry page that presents the data in a structured, hierarchical format based on the NOMAD <em>metainfo</em> schema. </p>
+<p><strong>Opening and exploring your Entry</strong></p>
+<p>To go to the entry page, click on the <img src="images/go_to_icon.png" alt="Go to arrow Icon" width="15"> icon next to the entry. Here you can view the metadata and useful visulaization of your data, check the uploaded files, and explore your entry in details. </p>
+<ul>
+<li>
+<p><strong>OVERVIEW</strong> tab:</p>
+<p>1- On the left, core metadata are displayed.</p>
+<p>2- On the right, various cards present the available information. </p>
+<p><img src="images/example_3-2_overview.png" alt="screenshot of the overview page" width="800"></p>
+<p>The cards you see depend on the properties or data available for that entry.</p>
+<p>For <em>FHI-aims</em> files, three main cards appear in the overview page: </p>
+<ul>
+<li>
+<p><em>Materials</em> card: shows key information and visulization of the composition and conventional cell.
+<img src="images/example_3-2_materials_card.png" alt="screenshot of electronic properties card" width="250"></p>
+</li>
+<li>
+<p><em>Electronic properties</em> card: shows the calculated band structure, density of states, and Brillouin zone.
+<img src="images/example_3-2_electronic_properties_card.png" alt="screenshot of materials card" width="250"></p>
+</li>
+<li>
+<p><em>Workflow Graph</em> card: illustrates the various steps in the calculation, including their inputs and outputs. 
+<img src="images/example_3-2_workflow_card.png" alt="screenshot of workflow card" width="250"></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>FILES</strong> tab:</p>
+<p>This tab shows the uploaded files. NOMAD lists all files in the same directory, as they usually belong together.</p>
+<p><img alt="screenshot of the files tab" src="images/example_3-2_files_tab.png" /></p>
+</li>
+<li>
+<p><strong>DATA</strong> tab:</p>
+<p>Also known as the "processed data" tab, this shows the results of the parsing and normalization process done by NOMAD. </p>
+<p>NOMAD puts all the data in a unified, hierarchical, and machine-processable format, following the NOMAD metainfo.</p>
+<p><img alt="Animation of the data tab" src="images/example_3-2_data_tab.gif" /></p>
+</li>
+</ul>
+</details>
+<h4 id="task-33-uploading-experiments-data-files">Task 3.3: Uploading experiments data files<a class="headerlink" href="#task-33-uploading-experiments-data-files" title="Permanent link">&para;</a></h4>
+<details class="example">
+<summary>Download the example files for this excercise</summary>
+<p>We have prepared a set of files for this task that can be downloaded from this <a href="https://github.com/FAIRmat-NFDI/FAIRmat-tutorial-16/raw/refs/heads/main/tutorial_16_materials/part_3_files/example_files_upload/experiments_data/xps_nexus_data.zip">link</a>. </p>
+<p>Download the folder, then uncompress it to your local machine at you preferred directory.</p>
+<p>This folder contains files related to an x-ray photoelectron spectroscopy (XPS) on the polymer PBTTT using SPECS spectrometer. </p>
+<p>It contains the data file in two different formats (<code>.nxs</code> and <code>.xml</code>), in addtion to an electronic lab notebook (ELN) file (<code>.yaml</code>) documenting additional details of the experiment. </p>
+<table>
+<thead>
+<tr>
+<th>file name</th>
+<th>format</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PBTTT_XPS_SPECS</td>
+<td>.nxs</td>
+<td>XPS data file in the standard NeXuS file format</td>
+</tr>
+<tr>
+<td>PBTTT_XPS_SPECS_raw</td>
+<td>.xml</td>
+<td>XPS data in a raw file format as produced by the spectrometer</td>
+</tr>
+<tr>
+<td>ELN_data_xml</td>
+<td>.yaml</td>
+<td>An ELN file used to record additional metadata of the experiment</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>NOMAD supports experimental data files in the <code>.nxs</code> format.</p>
+<p>These files can be uploaded directly to NOMAD, where they are processed, and structured <strong>Entries</strong> are created.</p>
+<details class="task">
+<summary>Uploading experimental data in the <code>.nxs</code> format</summary>
+<p><strong>Uploading the file</strong> </p>
+<p>Start with uploading the file <code>PBTTT_XPS_SPECS.nxs</code>. Lets use the drag and drop method as shown in the animation below.</p>
+<p><img alt="An animatation demonstrating the drag-and-drop of NeXuS files in NOMAD" src="images/example_3-3_drag_drop_files_nexus.gif" /></p>
+<p>After uploading files, processing is automatically triggered. This involves identifying supported file formats in NOMAD and extracting relevant (meta)data. The exact processing steps depend on the use case.</p>
+<p>Once processing is complete, NOMAD generates an Entry page that presents the data in a structured, hierarchical format based on the NOMAD <em>metainfo</em> schema. </p>
+<p><strong>Opening and exploring the Entry</strong></p>
+<p>Click on the <img src="images/go_to_icon.png" alt="Go to arrow Icon" width="15"> icon next to an entry navigates you to the respective entry page.</p>
+<p>Here you can view the metadata and useful visulaization of your data, check the uploaded files, and explore your entry in details. </p>
+<ul>
+<li>
+<p><strong>OVERVIEW Tab:</strong></p>
+<p>1- On the left, core metadata are displayed.</p>
+<p>2- On the right, various cards present the available information. </p>
+<p>The cards you see depend on the properties or data available for that entry.</p>
+<p>For <code>.nxs</code> files, two main cards appear in the overview page: the data viewer and the materials card.</p>
+<p><img alt="screenshot of the NeXuS entry overview page" src="images/example_3-3_overview_entry_nexus.png" /></p>
+</li>
+<li>
+<p><strong>FILES Tab:</strong> </p>
+<p>This tab shows the uploaded files. NOMAD lists all files in the same directory, as they usually belong together.</p>
+</li>
+<li>
+<p><strong>DATA Tab:</strong></p>
+<p>Also known as the "processed data" tab, this shows the results of the parsing and normalization process done by NOMAD. </p>
+<p>NOMAD puts all the data in a unified, hierarchical, and machine-processable format, following the NOMAD metainfo.</p>
+<p><img alt="Animation of the DATA Tab in NeXuS entry page" src="images/example_3-3_data_tab_entry_page_nexus.gif" /></p>
+</li>
+</ul>
+</details>
+<p>Most scientific instruments generate experimental results in formats other than <code>.nxs</code>. NOMAD still supports these files by providing a conversion process using the <strong>NexusDataConverter</strong> built-in schema, which transforms raw data into the <code>.nxs</code> format.</p>
+<details class="info">
+<summary>NexusDataConverter readers and the NeXuS application definitions</summary>
+<p><strong>A Reader</strong> is a program designed to interpret and extract data from a specific experimental technique or file format. </p>
+<p>The reader understands the structure and encoding of the particular data format and provides methods for accessing its contents in a programmatically friendly way.
+It acts as a bridge between raw experimental data and NOMAD by converting the data into the structured file format according to domain-specific application definitions. </p>
+<p>A list of available readers can be found <a href="https://fairmat-nfdi.github.io/pynxtools/reference/plugins.html">here</a></p>
+<p><strong>A NeXus application definition</strong> provides a structured specification of the terms and metadata required in an <code>.nxs</code> data file for a particular scientific application. These definitions outline the minimum set of terms that must be included in the data file for it to be considered valid according to the NeXus format.</p>
+<p>A list of NeXuS application definitions developed by FAIRmat can be found <a href="https://fairmat-nfdi.github.io/nexus_definitions/">here</a></p>
+<p>NexusDataConverter uses <strong>readers</strong> to interpret the raw data files, and then structures them according to the outlines of the <strong>application definitions</strong></p>
+</details>
+<p>In the following examples, you will learn how to upload a raw file from a SPECS instrument in <code>.xml</code> format by using the <strong>NexusDataConverter</strong>. You will do this in two ways:</p>
+<ol>
+<li>Uploading only the raw file.</li>
+<li>Uploading both the raw file and an ELN file, enriching your data with metadata and ensuring compliance with community standards.</li>
+</ol>
+<details class="task">
+<summary>Uploading experimental data in the <code>.xml</code> format</summary>
+<p><strong>Step 1:</strong> Click on the <code>CREATE FROM SCHEMA</code> button in your upload page.
+<img alt="Screenshot of step 1" src="images/example_3-3_create_from_schema.png" /></p>
+<p><strong>Step 2:</strong> In the <em>create new entry from schema</em> window, click on the drop-down menu of the built-in schema, and select <code>NexusDataConverter</code></p>
+<p><strong>Step 3:</strong> Give a descriptive name for the entry.</p>
+<p><strong>Step 4:</strong> Click on CREATE. This will take you the NexusDataConverter Entry page. </p>
+<p><img alt="Screenshot of steps 2 - 4" src="images/example_3-3_NexusDataConverter.png" /></p>
+<p><strong>Step 5:</strong> From the reader drop-down menu, choose the approperiate reader for your files. For this exercise select <em>xps</em>.</p>
+<p><strong>Step 6:</strong> From the nxdl drop-down menu, choose the approperiate application definition for your experiment. For this exercise select <em>NXxps</em></p>
+<p><strong>Step 7:</strong> Upload the raw data file <code>PBTTT_XPS_SPECS_raw.xml</code>.</p>
+<p><strong>Step 8:</strong> Give a descriptive name for the generated <code>.nxs</code> file.</p>
+<p><strong>Step 9:</strong> Click on the save icon to start the conversion process. </p>
+<p><img alt="Screenshots of steps 5 - 9" src="images/example_3-3_NexusDataConverter_2.png" /></p>
+<p>Check the overview page of your upload. There you will fine two newly created entries; one for the NexusDataConverter and one for the generated <code>.nxs</code> file from you your raw file. </p>
+<p>NOMAD still stores your <code>.xml</code> raw file in the upload directory. </p>
+<p><img alt="Screenshot of the upload page after nexus conversion." src="images/example_3-3_NexusDataConverter_3.png" /></p>
+</details>
+<details class="task">
+<summary>Uploading experimental data in the <code>.xml</code> format with additional ELN data</summary>
+<p>Often, raw files generated by instruments from various vendors lack complete metadata and essential details about the experiment.</p>
+<p>To address this, scientists document all experimental details in an Electronic Lab Notebook (ELN). Combining data from raw files with information from ELNs ensures that experiments are comprehensively described with rich metadata and conform to community standards.</p>
+<p>NOMAD’s <strong>NexusDataConverter</strong> allows you to merge experimental raw data files with ELN entries in <code>.yaml</code> format, producing <code>.nxs</code> files that meet community standards and ensure your data are richly-described.</p>
+<p>The ELN <code>.yaml</code> file can be generated by various ELN software tools or created manually using a text editor.</p>
+<p>For each supported experimental raw file format, FAIRmat provides a template ELN <code>.yaml</code> file containing all necessary attributes and parameters to complement the raw file’s data. These templates can be found <a href="https://github.com/FAIRmat-NFDI/pynxtools-xps/tree/a2e9524ae8479ffa9cde79daf2010161d8ae75c3/examples">here</a></p>
+<p>While these files can be edited with any text editor, we recommend using <strong>VS Code</strong> for an optimized editing experience.</p>
+<p><strong>Open the <code>eln_data_xml.yaml</code> file and edit its contents</strong></p>
+<ul>
+<li>Modify the start_time and end_time of your experiment. </li>
+<li>Write your information in the <code>users</code> section.</li>
+<li>Explore the other fields available in the ELN file. </li>
+<li>Save the file.</li>
+</ul>
+<p><img alt="Alt text" src="images/example_3-3_modifying_ELN.gif" /></p>
+<p><strong>Upload your data file <code>.xml</code> and your ELN data <code>.yaml</code> using NexusDataConverter</strong></p>
+<ul>
+<li><strong>Step 1:</strong> Click on the <code>CREATE FROM SCHEMA</code> button in your upload page.</li>
+</ul>
+<p><img alt="Screenshot of step 1" src="images/example_3-3_create_from_schema.png" /></p>
+<ul>
+<li>
+<p><strong>Step 2:</strong> In the <em>create new entry from schema</em> window, click on the drop-down menu of the built-in schema, and select <code>NexusDataConverter</code></p>
+</li>
+<li>
+<p><strong>Step 3:</strong> Give a descriptive name for the entry.</p>
+</li>
+<li>
+<p><strong>Step 4:</strong> Click on CREATE. This will take you the NexusDataConverter Entry page.</p>
+</li>
+</ul>
+<p><img alt="Screenshot of steps 2 - 4" src="images/example_3-3_NexusDataConverter.png" /></p>
+<ul>
+<li>
+<p><strong>Step 5:</strong> From the reader drop-down menu, choose the approperiate reader for your files. For this exercise select <em>xps</em>.</p>
+</li>
+<li>
+<p><strong>Step 6:</strong> From the nxdl drop-down menu, choose the approperiate application definition for your experiment. For this exercise select <em>NXxps</em></p>
+</li>
+<li>
+<p><strong>Step 7:</strong> Upload the raw data file <code>PBTTT_XPS_SPECS_raw.xml</code> as well as the ELN data file <code>eln_data_xml.yaml</code>.</p>
+</li>
+<li>
+<p><strong>Step 8:</strong> Give a descriptive name for the generated <code>.nxs</code> file.</p>
+</li>
+<li>
+<p><strong>Step 9:</strong> Click on the save icon to start the conversion process. </p>
+</li>
+</ul>
+<p><img alt="Screenshots of steps 5 - 9" src="images/example_3-3_NexusDataConverter_2%28with_ELN%29.png" /></p>
+</details>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../T16_2/T16_2_explore_data_records.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Explore NOMAD entries" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Explore NOMAD entries
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../T16_5/T16_5_create_a_dataset.html" class="md-footer__link md-footer__link--next" aria-label="Next: Create a Dataset" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Create a Dataset
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.footer", "content.code.copy"], "search": "../assets/javascripts/workers/search.c7dec7e7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.da79ceb7.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
